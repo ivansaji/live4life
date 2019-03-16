@@ -4,8 +4,8 @@ from django.shortcuts import render
 def home(request):
     return render(request,'bloodapp/home.html')
 
-def donorreg(request):
+def dnrreg(request):
     return render(request,'bloodapp/home.html')
 
-def acceptreg(request):
+def acptreg(request):
     return render(request,'bloodapp/home.html')

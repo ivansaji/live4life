@@ -17,7 +17,7 @@ from django.urls import path,include
 from . import views
 
 urlpatterns = [
-    path('',views.home),
-    path('dnrreg/',views.donorreg),
-    path('acptreg/',views.acceptreg)
+    path('' , views.home),
+    path('dnrreg/' , views.dnrreg),
+    path('acptreg/' , views.acptreg)
 ]
