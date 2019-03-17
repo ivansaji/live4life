@@ -5,7 +5,7 @@ def home(request):
     return render(request,'bloodapp/home.html')
 
 def dnrreg(request):
-    return render(request,'bloodapp/home.html')
+    return render(request,'bloodapp/dnrreg.html')
 
-def acptreg(request):
-    return render(request,'bloodapp/home.html')
+def acptrreg(request):
+    return render(request,'bloodapp/acptrreg.html')

@@ -19,5 +19,5 @@ from . import views
 urlpatterns = [
     path('' , views.home),
     path('dnrreg/' , views.dnrreg),
-    path('acptreg/' , views.acptreg)
+    path('acptrreg/' , views.acptrreg)
 ]
