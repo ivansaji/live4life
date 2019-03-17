@@ -23,35 +23,46 @@
         </div>
         <div>
             <!-- FORM  -->
-            <form method="POST" action="{% url '/acptrreg/' %}">
-              {% csrf_token %}
+            <form>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="name">Name</label>
-                    {{ form.name}}
+                    <input type="text" class="form-control" id="name" placeholder="Name">
                   </div>
-                  
+                  {{ form.name}}
                 </div>
 
                 <div class="form-row col-md-6">
                     <label for="bloodgroup">Blood Group</label>
-                   
+                    <select id="group" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>A +ve</option>
+                      <option>A -ve</option>
+                      <option>B +ve</option>
+                      <option>B -ve</option>
+                      <option>O +ve</option>
+                      <option>O -ve</option>
+                      <option>AB +ve</option>
+                      <option>AB -ve</option>
+                    </select>
+
+                    {{form.group}}
                 </div>
 
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="location">Location</label>
-                      {{form.location}} 
+                      <input type="text" class="form-control" id="location" placeholder="Location">
                     </div>
-                    
+                    {{form.location}}
                   </div>
 
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="contact">Contact Number</label>
-                      {{form.contact}}
+                      <input type="number" class="form-control" id="contact" placeholder="number">
                     </div>
-                    
+                    {{form.contact}}
                   </div>
 
 
