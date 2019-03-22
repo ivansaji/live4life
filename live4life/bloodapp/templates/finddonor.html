@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Blood For Life :: Find Donors</title>
+    </head>
+
+    <body>
+        <h1>Find Donors</h1><br><br><br>
+        <div>
+            {% for data in donor_list %}
+                <h3>Name of Donor : {{ data.name }}</h3>
+                <h5>Joined On : {{data.date_added}}</h5>
+                <h3>Blood Group : {{data.group}}</h3>
+                <h5>Location : {{data.location}}</h5>
+                <h5>Contact Number : {{data.contact}}</h5>
+                <br><br>
+
+            {% endfor %}
+        </div>
+        
+    </body>
+</html>

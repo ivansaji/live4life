@@ -13,15 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path
+from django.urls import path,include
 from . import views
 
-app_name='bloodapp'
 urlpatterns = [
-    path('' , views.index , name='index'),
-    path('dnr-reg/' , views.dnr_reg , name='donorreg'),
-    path('acptr-reg/' , views.acptr_reg , name='acceptorreg'),
-    path('find_dnr/',views.find_dnr , name='finddonor'),
-    path('find_acptr/',views.find_acptr , name='findacceptor'),
-    
+    path('' , views.home),
+    path('dnrreg/' , views.dnrreg),
+    path('acptrreg/' , views.acptrreg)
 ]
