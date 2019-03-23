@@ -5,14 +5,14 @@
 
     <body>
         {% include "navbar.html" %}
-        <h1>Find Acceptors</h1><br><br><br>
+        <h4>Find Acceptors</h4><br><br><br>
         <div>
             {% for data in acptr_list %}
-                <h3>Name of Acceptor : {{ data.name }}</h3>
-                <h5>Joined On : {{data.date_added}}</h5>
-                <h3>Blood Group : {{data.group}}</h3>
-                <h5>Location : {{data.location}}</h5>
-                <h5>Contact Number : {{data.contact}}</h5>
+                <h6>Name of Acceptor : {{ data.name }}</h6>
+                <h6>Joined On : {{data.date_added}}</h6>
+                <h6>Blood Group : {{data.group}}</h6>
+                <h6>Location : {{data.location}}</h6>
+                <h6>Contact Number : {{data.contact}}</h6>
                 <br><br>
 
             {% endfor %}
