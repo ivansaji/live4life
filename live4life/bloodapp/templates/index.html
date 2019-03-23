@@ -1,15 +1,34 @@
 {% load static %}
 
 <html>
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems, options);
+  });
+    </script>
     <head>
         <title>Blood For Life :: HOME</title>
+        <link rel="stylesheet" href="{% static 'materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'materialize.css' %}">
 
     </head>
 
     <body>
         <div><!--Body Begin-->
         {% include "navbar.html" %}
-
+        <img src="{% static 'images/3.jpeg' %}" alt="HOME" style="height: 100%; width :100%;">
+        
+        <div style=" position: absolute;top: 360 ;left: 0;">
+                
+                <footer>
+                        <h6>Developed By </h6><h5>Ivan Saji Abraham</h5>
+                </footer>
+        </div>
+                
+        
+        
+        
             
         
         </div> <!--End Of Body-->

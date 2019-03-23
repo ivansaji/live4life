@@ -20,7 +20,7 @@ def dnr_reg(request):
         # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
-        form = Acceptorform(request.POST)
+        form = Donorform(request.POST)
         # check whether it's valid:
         if form.is_valid():
             # process the data in form.cleaned_data as required
@@ -46,7 +46,7 @@ def acptr_reg(request):
         # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
-        form = Donorform(request.POST)
+        form = Acceptorform(request.POST)
         # check whether it's valid:
         if form.is_valid():
             # process the data in form.cleaned_data as required
