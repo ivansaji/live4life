@@ -2,21 +2,62 @@ from django.shortcuts import render
 
 # Create your views here.
 from .models import Acceptor,Donor
+from .forms import Myform
 
 
 
 def index(request):
     return render(request,'index.html')
 
+
+
+
+
 def dnr_reg(request):
-    #dnr reg code
-    
-    return render(request,'donorregistration.html')
+        # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = Myform(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required
+            # ...
+            # redirect to a new URL:
+            return HttpResponseRedirect('/thanks/')
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = Myform()
+
+    return render(request, 'donorregistration.html', {'form': form})
+
+
+
+
 
 def acptr_reg(request):
-    #acptr_reg code
+        # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = Myform(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required
+            # ...
+            # redirect to a new URL:
+            return HttpResponseRedirect('/thanks/')
 
-    return render(request,'acceptorregistration.html')
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = Myform()
+
+    return render(request, 'acceptorregistration.html', {'form': form})
+
+
+
+
+
+
 
 def find_dnr(request):
     #find donor code
@@ -25,6 +66,11 @@ def find_dnr(request):
     context = {'donor_list' : donor_list}
 
     return render(request,'finddonor.html',context)
+
+
+
+
+
 
 def find_acptr(request):
     #find acceptor code

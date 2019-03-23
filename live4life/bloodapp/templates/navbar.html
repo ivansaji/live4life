@@ -1,0 +1,32 @@
+{% load static %}
+
+<div> <!--Nav Bar Begin-->
+    <link rel="stylesheet" href="{% static 'materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'materialize.css' %}">
+        
+    <nav>
+        <div class="nav-wrapper grey darken-4">
+            
+                <a href="/" class="brand-logo">Blood 4 Life<img src="{% static 'images/logo.png' %}" alt="Home" style='height: 80%; width: 10%; object-fit: contain;'></a>
+                <a href="/" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"></i>menu</i></a>
+    
+            
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="find_acptr/">Find Acceptors</a></li>
+                    <li><a href="find_dnr/">Find Donors</a></li>
+                    <li><a href="dnr-reg/">Donor Registration</a></li>
+                    <li><a href="acptr-reg/">Acceptor Registration</a></li>
+                </ul>
+            
+        </div>
+    </nav>
+
+
+    <ul class="sidenav" id="mobile-demo">
+            <li><a href="find_acptr/">Find Acceptors</a></li>
+            <li><a href="find_dnr/">Find Donors</a></li>
+            <li><a href="dnr-reg/">Donor Registration</a></li>
+            <li><a href="acptr-reg/">Acceptor Registration</a></li>
+    </ul>
+
+</div><!--End Of NavBar-->

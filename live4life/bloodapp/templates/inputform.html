@@ -1,0 +1,14 @@
+<!-- Form   -->
+<div>
+        <form action="/your-name/" method="post">
+            {% csrf_token %}
+            <h6>Name : {{ form.name }}</h6>
+            <h6>Group : {{ form.group }}</h6>
+            <h6>Location : {{ form.location }}</h6>
+            <h6>Contact Number : {{ form.contact }}</h6>
+            
+
+            
+            <input type="submit" value="Submit">
+        </form>
+</div>
