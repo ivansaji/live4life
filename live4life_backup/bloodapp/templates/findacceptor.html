@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Blood For Life :: Find Acceptors</title>
+    </head>
+
+    <body>
+        {% include "navbar.html" %}
+        <h4>Find Acceptors</h4><br><br><br>
+        <div>
+            {% for data in acptr_list %}
+                <h6>Name of Acceptor : {{ data.name }}</h6>
+                <h6>Joined On : {{data.date_added}}</h6>
+                <h6>Blood Group : {{data.group}}</h6>
+                <h6>Location : {{data.location}}</h6>
+                <h6>Contact Number : {{data.contact}}</h6>
+                <br><br>
+
+            {% endfor %}
+        </div>
+    </body>
+</html>
